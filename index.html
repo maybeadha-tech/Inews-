@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berita Harian – Breaking News</title>
+
+<style>
+/* ----------------------------------
+      NORMAL WEBSITE (FAKE NEWS)
+----------------------------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    transition: 0.3s;
+}
+header {
+    background: #003366;
+    color: white;
+    padding: 15px 20px;
+}
+header h1 { margin: 0; font-size: 24px; }
+
+nav {
+    background: #0055aa;
+    color: white;
+    padding: 10px 20px;
+}
+nav a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    padding: 20px;
+}
+.main-article {
+    flex: 3;
+    margin-right: 20px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.sidebar {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* ----------------------------------
+      VIRUS MODE ELEMENTS
+----------------------------------- */
+#virusLogs {
+    display:none;
+    white-space: pre-line;
+    font-family: monospace;
+    color: red;
+    padding: 10px;
+}
+
+#static, #crack, #cameraLamp, #trace, #wipe, #bios {
+    display:none;
+}
+
+/* Static noise */
+#static {
+    position: fixed;
+    inset: 0;
+    background: url("https://i.imgur.com/vqRkKxF.gif");
+    background-size: cover;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    opacity: 0;
+    transition: .2s;
+    z-index: 9999;
+}
+
+/* Screen crack */
+#crack {
+    position: fixed;
+    inset: 0;
+    background: url('https://i.imgur.com/eoZQkS9.png');
+    background-size: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+/* Fake camera lamp */
+#cameraLamp {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px red;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 99999;
+}
+
+/* Cursor trace */
+#trace {
+    position: fixed;
+    font-size: 13px;
+    color: red;
+    pointer-events: none;
+    opacity: 0.7;
+    text-shadow: 0 0 5px red;
+    z-index: 9999;
+}
+
+/* Touch lag */
+.touch {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    background: rgba(255,0,0,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fade 1s forwards;
+}
+@keyframes fade { to {opacity:0;} }
+
+/* Panic popup */
+.popup {
+    position: absolute;
+    background: #100000;
+    border: 1px solid red;
+    color: red;
+    padding: 10px;
+    width: 220px;
+    font-size: 12px;
+    animation: shake 0.2s infinite;
+    z-index: 9999;
+}
+@keyframes shake {
+    0% { transform: translate(1px,-1px); }
+    50% { transform: translate(-2px,2px); }
+    100% { transform: translate(2px,-2px); }
+}
+
+/* BIOS takeover */
+#bios {
+    position: fixed;
+    inset: 0;
+    background: #300000;
+    color: #ff5555;
+    display: none;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    text-align:center;
+    z-index:999999;
+    font-family: monospace;
+    text-shadow:0 0 10px red;
+}
+
+/* Wipe screen text */
+#wipe {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    color: red;
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    font-size: 26px;
+    text-align:center;
+    font-family: monospace;
+    z-index: 999999;
+    text-shadow: 0 0 10px red;
+    animation: neonGlitch 0.15s infinite alternate;
+}
+
+@keyframes neonGlitch {
+    0% {opacity: 0.4; transform: translateX(-1px);}
+    50% {opacity: 1; transform: translateX(1px);}
+    100% {opacity: 0.6; transform: translateX(-2px);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Berita Harian</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Nasional</a>
+    <a href="#">Internasional</a>
+    <a href="#">Teknologi</a>
+</nav>
+
+<div class="container">
+    <div class="main-article">
+        <h2>Penemuan Misterius di Tengah Kota</h2>
+        <p><em>Oleh Redaksi Berita Harian – 22 November 2025</em></p>
+        <img src="https://i.imgur.com/4AiXzf8.jpg">
+        <p>Penduduk dikejutkan oleh penemuan benda aneh di alun-alun kota...</p>
+    </div>
+
+    <div class="sidebar">
+        <h3>Berita Populer</h3>
+        <ul>
+            <li><a href="#">Tips Aman Saat Musim Hujan</a></li>
+            <li><a href="#">Teknologi Baru Smartphone 2025</a></li>
+            <li><a href="#">Cuaca Ekstrem Melanda Pulau Jawa</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- VIRUS ELEMENTS -->
+<div id="virusLogs"></div>
+<div id="static"></div>
+<div id="crack"></div>
+<div id="cameraLamp"></div>
+<div id="trace">CORRUPTED</div>
+<div id="wipe">
+    DEVICE CORRUPTED<br>
+    <span id="count" style="font-size:18px;">10</span>
+</div>
+<div id="bios">
+    SYSTEM OVERRIDE<br><br>
+    UNAUTHORIZED ROOT ACCESS<br>
+    RECOVERING BIOS...
+</div>
+
+<audio id="alarm" src="https://www.soundjay.com/misc/sounds/fail-buzzer-01.mp3"></audio>
+<audio id="alarm2" src="https://www.soundjay.com/button/beep-07.mp3"></audio>
+    <script>
+// ==============================
+// START VIRUS AFTER 4 DETIK
+// ==============================
+setTimeout(startVirus,4000);
+
+function startVirus(){
+    document.body.style.background="black";
+    document.body.style.color="red";
+    document.querySelector('.container').style.display="none";
+    virusLogs.style.display="block";
+
+    const logs=[
+        "Unauthorized access detected...",
+        "Memory corruption...",
+        "GPU overload...",
+        "System instability rising...",
+        "Injecting malware modules...",
+        "Kernel panic...",
+        "Root override..."
+    ];
+    let i=0;
+    setInterval(()=>{
+        virusLogs.innerText+="\n"+logs[i%logs.length];
+        i++;
+    },500);
+
+    startChaos();
+}
+
+// ==============================
+// CHAOS MODE FUNCTION
+// ==============================
+function startChaos(){
+
+    // Fullscreen takeover
+    if(document.documentElement.requestFullscreen){
+        document.documentElement.requestFullscreen();
+    }
+
+    // STATIC + CRACK effect
+    setInterval(()=>{
+        static.style.display="block";
+        crack.style.display="block";
+        static.style.opacity=1;
+        crack.style.opacity=0.8;
+        document.body.style.filter="contrast(4) hue-rotate(180deg)";
+        setTimeout(()=>{
+            static.style.opacity=0;
+            crack.style.opacity=0;
+            document.body.style.filter="none";
+        },400);
+    },4000);
+
+    // Random popup error spam
+    setInterval(()=>{
+        let p=document.createElement("div");
+        p.className="popup";
+        p.style.left=Math.random()*window.innerWidth+"px";
+        p.style.top=Math.random()*window.innerHeight+"px";
+        p.innerText="CRITICAL ERROR\nCODE:"+Math.floor(Math.random()*99999);
+        document.body.appendChild(p);
+        setTimeout(()=>p.remove(),3000);
+    },800);
+
+    // Cursor trace follow
+    document.addEventListener("mousemove",(e)=>{
+        trace.style.opacity=1;
+        trace.style.left=e.clientX+15+"px";
+        trace.style.top=e.clientY+15+"px";
+    });
+
+    // Touch screen lag
+    document.addEventListener("touchstart",(e)=>{
+        let t=document.createElement("div");
+        t.className="touch";
+        t.style.left=e.touches[0].clientX-15+"px";
+        t.style.top=e.touches[0].clientY-15+"px";
+        document.body.appendChild(t);
+        setTimeout(()=>t.remove(),1000);
+        // extreme lag loop
+        for(let i=0;i<14000000;i++){}
+    });
+
+    // Vibration loop
+    setInterval(()=>{
+        if(navigator.vibrate) navigator.vibrate([200,100,300,100,500]);
+    },7000);
+
+    // Blackout flicker
+    setInterval(()=>{
+        document.body.style.opacity=0;
+        setTimeout(()=>document.body.style.opacity=1,300);
+    },7000);
+
+    // Zoom glitch
+    setInterval(()=>{
+        document.body.style.transform="scale(1.2)";
+        setTimeout(()=>document.body.style.transform="scale(1)",500);
+    },8000);
+
+    // Camera lamp blink
+    setTimeout(()=>{
+        cameraLamp.style.display="block";
+        cameraLamp.style.opacity=1;
+    },5000);
+
+    // Alarm sound loops
+    setInterval(()=>{
+        alarm.play().catch(()=>{});
+        alarm2.play().catch(()=>{});
+    },10000);
+
+    // BIOS takeover popup
+    setTimeout(()=>{
+        bios.style.display="flex";
+        setTimeout(()=>{bios.style.display="none";},4000);
+    },12000);
+
+    // Wipe countdown at bottom
+    setTimeout(()=>{
+        wipe.style.display="flex";
+        let c=10;
+        let timer=setInterval(()=>{
+            c--;
+            count.innerText=c;
+            if(c<=0){
+                clearInterval(timer);
+                wipe.innerHTML="DEVICE CORRUPTED.";
+            }
+        },1000);
+    },15000);
+
+    // =========================
+    // EXTRA FEATURES
+    // =========================
+
+    // FAKE PERMISSION SPAM
+    setInterval(()=>{
+        let ask=["Mengakses Kamera","Mengakses Mikrofon","Membaca WA","Sync Kontak","Scan Wajah"];
+        let p=document.createElement("div");
+        p.className="popup";
+        p.style.left=Math.random()*window.innerWidth+"px";
+        p.style.top=Math.random()*window.innerHeight+"px";
+        p.innerText=ask[Math.floor(Math.random()*ask.length)]+"\nALLOW • DENY";
+        document.body.appendChild(p);
+        setTimeout(()=>p.remove(),3000);
+    },1200);
+
+    // FAKE EMAIL LEAK
+    setTimeout(()=>{
+        let fake=generateFakeEmail();
+        let p=document.createElement("div");
+        p.className="popup";
+        p.style.left="20px"; p.style.top="20px";
+        p.innerText="⚠ DATA LEAK DETECTED\nEmail ditemukan:\n"+fake+"\nMengirim ke server...";
+        document.body.appendChild(p);
+
+        let big=document.createElement("div");
+        big.style.position="fixed";
+        big.style.inset=0;
+        big.style.display="flex";
+        big.style.justifyContent="center";
+        big.style.alignItems="center";
+        big.style.color="red";
+        big.style.fontSize="28px";
+        big.style.fontFamily="monospace";
+        big.style.background="rgba(0,0,0,0.8)";
+        big.style.animation="flicker 0.15s infinite";
+        big.innerText="EMAIL BREACH DETECTED";
+        document.body.appendChild(big);
+
+        setTimeout(()=>big.remove(),4000);
+        setTimeout(()=>p.remove(),6000);
+    },9000);
+
+    // FAKE BATTERY CRITICAL
+    setTimeout(()=>{
+        let b=document.createElement("div");
+        b.className="popup";
+        b.style.left="20px"; b.style.top="100px";
+        b.innerText="⚠ Battery Critical (2%)\nForce Shutdown Active";
+        document.body.appendChild(b);
+        setTimeout(()=>b.remove(),6000);
+    },7000);
+
+    // FAKE OVERHEAT POPUPS
+    setInterval(()=>{
+        let h=document.createElement("div");
+        h.className="popup";
+        h.style.left=Math.random()*window.innerWidth+"px";
+        h.style.top=Math.random()*window.innerHeight+"px";
+        h.innerText="⚠ TEMPERATURE: 89°C\nCooling Failed";
+        document.body.appendChild(h);
+        setTimeout(()=>h.remove(),3000);
+    },11000);
+
+    // AUTO TYPING SYSTEM
+    setInterval(()=>{
+        let t=document.createElement("div");
+        t.style.position="fixed";
+        t.style.bottom="10px";
+        t.style.left="10px";
+        t.style.color="red";
+        t.style.fontFamily="monospace";
+        t.innerText="> system override…";
+        document.body.appendChild(t);
+        setTimeout(()=>t.remove(),3000);
+    },3500);
+
+    // FAKE SYSTEM UPDATE SCREEN
+    setTimeout(()=>{
+        let upd=document.createElement("div");
+        upd.style.position="fixed";
+        upd.style.inset=0;
+        upd.style.background="black";
+        upd.style.color="white";
+        upd.style.display="flex";
+        upd.style.alignItems="center";
+        upd.style.justifyContent="center";
+        upd.style.fontSize="22px";
+        upd.style.textAlign="center";
+        upd.style.zIndex="999999";
+        upd.innerText="System Update Installing...\nDo Not Turn Off Device";
+        document.body.appendChild(upd);
+        setTimeout(()=>upd.remove(),3000);
+    },10000);
+
+    // SCREEN ROTATE GLITCH
+    setInterval(()=>{
+        document.body.style.transform="rotate(2deg)";
+        setTimeout(()=>document.body.style.transform="rotate(-2deg)",200);
+        setTimeout(()=>document.body.style.transform="rotate(0deg)",500);
+    },9000);
+}
+
+// =========================
+// GENERATE FAKE EMAIL
+// =========================
+function generateFakeEmail(){
+    let ua=navigator.userAgent;
+    let base=ua.split(/[;()\s]+/).find(x=>x.length>3 && isNaN(x))||"user";
+    let domain=["gmail.com","outlook.com","yahoo.com","icloud.com"];
+    let num=Math.floor(Math.random()*899+100);
+    return (base.toLowerCase()+num+"@"+domain[Math.floor(Math.random()*domain.length)]).replace(/[^a-z0-9@.]/g,"");
+}
+</script>
+    <style>
+/* ==============================
+   POPUP ERROR
+============================== */
+.popup{
+    position:fixed;
+    padding:10px 18px;
+    background:rgba(255,0,0,0.15);
+    border:1px solid red;
+    color:red;
+    font-family:monospace;
+    font-size:14px;
+    backdrop-filter:blur(2px);
+    animation:pop 0.2s ease;
+    z-index:99999;
+}
+@keyframes pop{
+    from{transform:scale(0.5) rotate(5deg); opacity:0;}
+    to{transform:scale(1) rotate(0); opacity:1;}
+}
+
+/* Cursor trace */
+#trace{
+    width:25px;
+    height:25px;
+    border:2px solid red;
+    border-radius:50%;
+    position:fixed;
+    pointer-events:none;
+    opacity:0;
+    transition:0.05s;
+    z-index:99999;
+}
+
+/* Touch glitch */
+.touch{
+    width:40px;
+    height:40px;
+    background:rgba(255,0,0,0.3);
+    border-radius:100%;
+    position:fixed;
+    pointer-events:none;
+    filter:blur(4px);
+    animation:touchanim 0.5s linear;
+}
+@keyframes touchanim{
+    from{transform:scale(0.5); opacity:1;}
+    to{transform:scale(2); opacity:0;}
+}
+
+/* Static noise */
+#static{
+    position:fixed;
+    inset:0;
+    background:url("https://media.tenor.com/2welWc5NyEAAAAAC/static.gif");
+    background-size:cover;
+    opacity:0;
+    transition:0.2s;
+    z-index:99998;
+}
+
+/* Screen crack */
+#crack{
+    position:fixed;
+    inset:0;
+    background:url("https://i.imgur.com/UEVOoVh.png");
+    background-size:cover;
+    opacity:0;
+    pointer-events:none;
+    transition:0.2s;
+    z-index:99997;
+}
+
+/* BIOS takeover */
+#bios{
+    position:fixed;
+    inset:0;
+    background:black;
+    color:lawngreen;
+    font-family:monospace;
+    font-size:18px;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:999999;
+}
+
+/* Wipe countdown */
+#wipe{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:60px;
+    background:black;
+    color:red;
+    font-size:24px;
+    font-family:monospace;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    animation:flicker 0.15s infinite;
+    z-index:9999999;
+}
+
+/* Neon red flicker */
+@keyframes flicker{
+    0%{opacity:1;}
+    50%{opacity:0.2;}
+    100%{opacity:1;}
+}
+
+/* BIG CORRUPTED TEXT */
+#corrupted{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:70px;
+    font-family:monospace;
+    color:red;
+    text-shadow:0 0 20px red, 0 0 50px red;
+    animation:flicker2 0.07s infinite;
+    display:none;
+    z-index:99999999;
+}
+@keyframes flicker2{
+    0%{opacity:1; transform:scale(1);}
+    50%{opacity:0.4; transform:scale(1.05) rotate(1deg);}
+    100%{opacity:1; transform:scale(1);}
+}
+
+/* Camera lamp */
+#cameraLamp{
+    position:fixed;
+    top:8px;
+    right:8px;
+    width:10px;
+    height:10px;
+    background:red;
+    border-radius:100%;
+    filter:blur(4px);
+    box-shadow:0 0 20px red;
+    opacity:0;
+    display:none;
+    transition:0.2s;
+    z-index:99999;
+}
+</style>
+
+<!-- ELEMENTS -->
+<div id="trace"></div>
+<div id="static"></div>
+<div id="crack"></div>
+
+<div id="bios">
+<b>[BOOT MANAGER FAIL]</b><br><br>
+SYSTEM ROOT OVERRIDE<br>
+LOADING FORCED ENVIRONMENT...
+</div>
+
+<div id="wipe">
+WIPING DEVICE IN <span id="count">10</span>...
+</div>
+
+<div id="cameraLamp"></div>
+
+<div id="corrupted">DEVICE CORRUPTED</div>
+
+<script>
+/* FINAL CHAOS: SHOW FINAL WARNING */
+setTimeout(()=>{
+    document.getElementById("corrupted").style.display="flex";
+}, 21000);
+</script>
+<style>
+/* ============================
+   FAKE NOTIFICATION
+============================ */
+.fakeNotif {
+    position: fixed;
+    top: 20px;
+    right: -350px; /* start hidden */
+    width: 300px;
+    padding: 12px 15px;
+    background: #1a0000;
+    border-left: 4px solid red;
+    border-radius: 4px;
+    color: #ff4444;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 10px red;
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 999999999;
+}
+.fakeNotif.show {
+    right: 20px;
+    opacity: 1;
+}
+
+/* icon */
+.fakeNotif::before {
+    content: "⚠️";
+    margin-right: 8px;
+}
+</style>
+
+<script>
+/* ============================
+   FULLSCREEN PAKSA NONSTOP
+============================ */
+function forceFullscreen(){
+    if (!document.fullscreenElement){
+        document.documentElement.requestFullscreen().catch(()=>{});
+    }
+}
+setInterval(forceFullscreen, 500); // check tiap 0.5s
+
+/* ============================
+   FAKE NOTIFICATION SPAM
+============================ */
+function showNotif(text){
+    let n = document.createElement("div");
+    n.className = "fakeNotif";
+    n.innerText = text;
+
+    document.body.appendChild(n);
+
+    // Tampilkan notif
+    setTimeout(()=> n.classList.add("show"), 100);
+
+    // Hapus notif setelah 4 detik
+    setTimeout(()=>{
+        n.classList.remove("show");
+        setTimeout(()=> n.remove(), 300);
+    }, 4000);
+}
+
+/* Notif spam berulang */
+let notifList = [
+    "Google Security Alert: Unauthorized script detected.",
+    "Chrome Warning: Malicious behavior detected.",
+    "System Alert: Data breach attempt blocked.",
+    "Google Account Sync Failed.",
+    "High Risk Activity Detected on this Device.",
+    "Chrome Error: Forced protection engaged.",
+];
+
+setInterval(()=>{
+    let msg = notifList[Math.floor(Math.random()*notifList.length)];
+    showNotif(msg);
+
+    // Getar biar makin horor
+    if(navigator.vibrate) navigator.vibrate([200,100,200]);
+}, 6000); // tiap 6 detik muncul
+</script>
+</body>
+</html>
